@@ -1,0 +1,26 @@
+<h1>hackers</h1>
+<% @hackers.each_with_index do |l,index| %>
+<div>
+  <br>
+      <% name = ["해커스"] %>
+      <% subject = ["토플", "토익", "토스"] %>
+      <% level = ["기초","필수","입문","기본","중급","정규","실전"] %>
+      <% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
+      <% time = ["아침", "오전", "오후", "저녁"] %>
+      <span style="font-size:14px;">
+      <%= index+1%>ㅣ
+      학원(name)<%= name[l.name-1] %>ㅣ
+      과목군(subject)<%= subject[l.subject-1] %>ㅣ
+      요일,시간(day)<%= l.day%>ㅣ
+      시간(time)<%= time[l.time-1]%>ㅣ
+      요일(week)<%= week[l.week-1]%>ㅣ
+      강의명(title)<%= l.title%>ㅣ
+      <a href="http://www.hackers.ac<%= l.link %>" target="_blank">링크(link)</a>ㅣ
+      강사(teacher)<%= l.teacher%>ㅣ
+      가격(price)<%= l.price%>ㅣ
+      레벨(level)<%= level[l.level-1]%>ㅣ
+    </span>
+      <br>
+      <hr>
+</div>
+<% end %>
